@@ -4,6 +4,7 @@ A graph data structure consists of a finite , *and possibly mutable*, set of ord
 where V is the set of vertices and E is the set of edges
 
 <!--TL;DR a graph is formed by vertices and edges connecting the vertices -->
+![alt text](https://github.com/YusufTaha/Algorithms/blob/master/Images/SimpleGraph_950.png)
 
 
 + ### A Vertex (node)
