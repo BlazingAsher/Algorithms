@@ -1,27 +1,14 @@
 # Algorithms
 ---
-The aim of this repository is to provide markdown lessons for advanced programming pradigims that will help in competetive coding.
+The aim of this repository is to provide markdown lessons for advanced programming paradigms that will help in competitive coding.
 
 
 #### The Repo's structure
 
         ├── Algorithms
-        │   ├── DynamicProgramming
-        │   │   ├── DynamicProgramming.md
-        |   |   ├── DynamicProgramming1.cpp
-        |   |   ├── DynamicProgramming1.py
-        |   |
-        │   ├── GraphTheory
-        │   │   ├── GraphTheory.md
-        |   |   ├── GraphTheory1.cpp
-        |   |   ├── GraphTheory1.py
-        |   |
-        │   ├── ...
-        │   │   ├── ....md
-        |   |   ├── ...1.cpp
-        |   |   ├── ...2.cpp
-        |   |   ├── ...1.py
-        |   |   ├── ...2.py
+        │   ├── DynamicProgramming.md
+        │   ├── GraphTheory.md
+        │   ├── ... .md
         |   |
         ├── Problems
         │   ├── DynamicProgramming
@@ -38,4 +25,4 @@ The aim of this repository is to provide markdown lessons for advanced programmi
 #### Editor's Notes
 + Lessons will be posted at least one day before the club is held
 + Markdown files will contain at least everything that will be taught
-+ Solutions will not be posted, but lessons are going to have an easier version of the peoblems with their solutions
++ Solutions will not be posted, but lessons are going to have an easier version of the problems with their solutions
