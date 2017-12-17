@@ -6,6 +6,7 @@ The aim of this repository is to provide markdown lessons for advanced programmi
 #### The Repo's structure
 
         ├── Algorithms
+        │   ├── Images
         │   ├── DynamicProgramming.md
         │   ├── GraphTheory.md
         │   ├── ... .md
@@ -24,5 +25,4 @@ The aim of this repository is to provide markdown lessons for advanced programmi
 
 #### Editor's Notes
 + Lessons will be posted at least one day before the club is held
-+ Markdown files will contain at least everything that will be taught
 + Solutions will not be posted, but lessons are going to have an easier version of the problems with their solutions
