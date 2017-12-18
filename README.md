@@ -6,7 +6,7 @@ The aim of this repository is to provide markdown lessons for advanced programmi
 #### The Repo's structure
 
         ├── Algorithms
-        │   ├── Images
+        │   ├── Images // assets folder
         │   ├── DynamicProgramming.md
         │   ├── GraphTheory.md
         │   ├── ... .md
