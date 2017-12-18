@@ -27,9 +27,11 @@ where V is the set of vertices and E is the set of edges
 
     > if a graph is not connected we consider Kappa(G) which is the number of connected subgraphs
     + a graph's `diameter` is the largest number of vertices which must be traversed in order to travel from one vertex to another when paths which backtrack, detour, or loop are excluded from consideration.
+    ### Figure 1
+    ![](Images/img1.png)
 
 
-    ### ways to representa graph
+    ### ways to implement a graph
 
     + Adjacency list : an array of size V with each element in the array pointing to a linked list. The array is indexed by a vertex (vertices from 0 to v-1) or a hash. where each index or key points to alinked list of adjacent verticies
     + Object Oriented: where vertex is an object and has the attribute neighbours which stores the linked list
@@ -49,6 +51,3 @@ where V is the set of vertices and E is the set of edges
     > a closed path is a `cycle`. The first and the last vertex can be repeated
 
 <!--TL;DR a graph is formed by vertices and edges connecting the vertices -->
-
-### Some graphs
-![](Images/img1.png)
