@@ -9,6 +9,7 @@
     - [A node](#a-node)
     - [An Edge](#an-edge)
     - [ways to implement a graph](#ways-to-implement-a-graph)
+        - [Figure 4](#figure-4)
 
 <!-- /TOC -->
 
@@ -25,7 +26,7 @@ Most graphs are either are directed or undirected but a mix of both also exists
 
 >[Fig. 1](#figure-1) is neither directed nor nondirected graph
 >because not all vertecies are directed like the node
->connecting node 4 and node 9.
+>connecting node 3 and node 8.
 
 
 + A graph is connected if there is an x,y path for x, y ∈ V
@@ -33,13 +34,14 @@ Most graphs are either are directed or undirected but a mix of both also exists
 >[Fig. 1](#figure-1) is an example of a disconnected graph.
 
 
->[Fig. 2](#figure-2) is an example of a connected graph
-+ a graph's `diameter` is the longest shortest path in a connected graph without backtracking or repeating edges or nodes.
-
 ### Figure 1
 ![](Images/img1.png)
+>[Fig. 2](#figure-2) is an example of a connected graph
++ a graph's `diameter` is the longest shortest path in a connected graph without backtracking or repeating edges or nodes, refer to the yellow path in [Fig. 3](#figure-3).
+
 ### Figure 2
 ![](Images/img2.png)
+
 ### Figure 3
 ![](Images/img3.png)
 
@@ -59,7 +61,7 @@ Represented as a line connecting nodes.
 + `Weighted graphs` have distances on their edges (In [Fig. 1](#figure-1) edge connecting node 1 and node 3)
 + `directed graphs` have directed edges like (In [Fig. 1](#figure-1) edge connecting node 3 and node 8)
 
-+ `Walk` is a sequence of vertices and edges
+<!-- + `Walk` is a sequence of vertices and edges
 
 > `closed walk` is a walk that starts at a node and returns to it
 
@@ -71,15 +73,26 @@ Represented as a line connecting nodes.
 
 + `Path` a walk with no repeated vertices
 
->a closed path is a `cycle`. The first and the last node can be repeated
+>a closed path is a `cycle`. The first and the last node can be repeated -->
 
 
 ## ways to implement a graph
 
 + `Adjacency list` -> an array of size V with each element in the array pointing to a linked list. The array is indexed by a node (vertices from 0 to v-1) or a hash. where each index or key points to alinked list of adjacent verticies
 
++ `Adjacency Matrix` -> a (0,1)-matrix represented by
+
+a [#of nodes ⨉ # of nodes] 2D-array
+> [Fig. 4](#figure-4) represents a graph and it's Adjacency matrix where the array at Adj[i][j] represents edge between i and j and the number denotes the multiplicity of the edges.
+
+### Figure 4
+![](Images/img4.png)
+
 + `OPP approach` -> where node is an object and has the attribute neighbours which stores the linked list
 
 + `Implicit` -> where the adjacency of a node is a function or node.neghbours() is a method (which takes less space if you aren't going to use all verticies)
 
->Ignoring the implicit representation you need at best Θ(V + E) space
+
+**Ignoring the implicit representation you need Θ(V + E) space to store graph**
+
+<!-- <font color="red">This is some text!</font> -->

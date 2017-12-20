@@ -1,49 +1,47 @@
-# Graph Searching
-Recape: A graph is a collection of nodes where each node might point to another nodes and the way they point might be directed or indirected.
+**Table Of Conetents**
+<!-- TOC -->
+
+- [Graph Search](#graph-search)
+    - [Breadth First Search](#breadth-first-search)
+        - [figure 1](#figure-1)
+
+<!-- /TOC -->
+
+# Graph Search
+Navigating through a graph is one of the very first uses for graphs. The way you implement graph traversal varries depending on what you want to achieve. Some applications include web
++ Web crawling
++ Pathfinding
++ Finding shortest paths
++ Maze generation
++ finding all vertices within one connected component;
 
 
-#### Implementation of a graph
+![](images/gif1.gif)
+
+## Breadth First Search
+BFS is one of the most famous graph traversal algorithms because of how broad it can search. In other words, BFS explores the starting node's neighbours before going to the next level of nodes.
+> BFS is shown in [Fig. 1](###figure-1)
+
+### figure 1
+![](images/gif2.gif)
+<code>hello</code>
 ```python
+# bfs traversal the graph
+def bfs(start :int, Adj :dict):
+    level  = {start: None}
+    parent = {start: None}
+
+    frontier = [start] # what we reached in previous level
+    i = 1
+    while frontier: # as long as there are still nodes
+        next = [] # i
+        for node in frontier:
+            for v in Adj[node]:
+                if v not in level:
+                    # shortest path length (in edges) {vertex:edges to start node}
+                    level[v] = i
+                    parent[v] = node
+                    next.append(v)
+        frontier = next
+        i += 1
 ```
-
-
-The First problem a graph proves useful in is pathfinding or `Graph searching`. The problem is presented as follows: Im given node x can you go to node y?
-
-There are ideally two ways to do this.
-### Depth First search
-This algorithm is recursive and priorotizes how deep the search gets rather than how wide.
-### Breadth First search
-This algorithm priorotizes how broadly the search is rather than how deep, and in BFS you need to use a qeue.
-
-
-<!--
-A graph in cpp
-```cpp
-#include "graphs.cc"
-
-int main( int argc, char *argv[ ])
-{
-    Graph g;
-    Search_Description s;
-    vector<string> nodenames;
-
-    nodenames.push_back("A");
-    nodenames.push_back("B");
-    nodenames.push_back("C");
-    nodenames.push_back("D");
-    nodenames.push_back("E");
-    nodenames.push_back("F");
-
-    for (int i = 0; i<6; i++)
-    {
-       for (int j = i+1; j<6; j++)
-       {
-          g.addEdge(nodenames[i],nodenames[j],i+j,"anon");
-       }
-    }
-
-    g.shortestpaths("B");
-    return 0;
-}
-```
--->
