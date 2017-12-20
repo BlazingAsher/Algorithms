@@ -19,7 +19,6 @@ Navigating through a graph is one of the very first uses for graphs. The way you
 + Maze generation
 + finding all vertices within one connected component;
 
-
 **BFS pathfinding algorithm**
 
 ![](Images/gif1.gif)

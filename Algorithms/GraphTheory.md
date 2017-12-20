@@ -10,6 +10,9 @@
     - [An Edge](#an-edge)
     - [ways to implement a graph](#ways-to-implement-a-graph)
         - [Figure 4](#figure-4)
+    - [Trees](#trees)
+    - [Connected components](#connected-components)
+        - [Figure 4](#figure-4-1)
 
 <!-- /TOC -->
 
@@ -58,6 +61,7 @@ Represented as a line connecting nodes.
 + An edge can be parallel to another `multigraphs` edges that are parallel to another edge have a multiplicity of 2 (In [Fig. 1](#figure-1) edge connecting node 3 and node 8 )
 + `Weighted graphs` have distances on their edges (In [Fig. 1](#figure-1) edge connecting node 1 and node 3)
 + `directed graphs` have directed edges like (In [Fig. 1](#figure-1) edge connecting node 3 and node 8)
++ `cycle` is a path of edges that go in a 'cycle' back to the starting node
 
 <!-- + `Walk` is a sequence of vertices and edges
 
@@ -93,4 +97,13 @@ a [#of nodes ⨉ # of nodes] 2D-array
 
 **Ignoring the implicit representation you need Θ(V + E) space to store graph**
 
-<!-- <font color="red">This is some text!</font> -->
+## Trees
+A `tree` is a connected graph with no trees The edges of a tree are known as branches. Elements of trees are called their nodes. The nodes without child nodes are called leaf nodes. a disjoint collection of trees is called a `forest`.
+
+
+## Connected components
+A `component` of an undirected graph is a subgraph that is completely disconnected than the other components
+>[Fig. 5](#figure-5) shows a graph with 4 components
+
+### Figure 4
+![](Images/img6.png)
