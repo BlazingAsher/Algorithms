@@ -11,11 +11,8 @@ The aim of this repository is to provide markdown lessons for advanced programmi
         │   ├── GraphTheory.md
         │   ├── ... .md
         |   |
-        ├── Problems
-        │   ├── DynamicProgramming
-        │   │   ├── ProblemSet.md     // will contain links
-        │   ├── ...
-        │   │   ├── ProblemSet.md
+        ├── ProblemSet.md     // will contain links to problems
+
 ### Contests
 | Contest        | Date                                                       |
 | ------------- |:-------------:                                              |

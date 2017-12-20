@@ -69,14 +69,13 @@ DFS is much more intuitive than BFS in traversal although it is the recursive ap
 **DFS in action**
 ![](Images/gif3.gif)
 ```python
-def dfs(start :int, Adj :dict):
-    parent = {start: None}
-    def search(start :int, Adj :dict):
-        for neighbour in Adj[start]:
-            if neighbour not in parent:
-                parent[neighbour] = start
-                search(start = neighbour, Adj = Adj)
-    search(start, Adj)
+def dfs(graph, start, visited=None):
+    if visited is None:
+        visited = set()
+    visited.add(start)
+    for next in graph[start] - visited:
+        dfs(graph, next, visited)
+    return visited
 
-dfs(start = 6, Adj = {1:{2,3},2:{5,4,1},3:{1,6},4:{2},5:{2},6:{3,7},7:{6}})
+dfs(graph, 'C') # {'E', 'D', 'F', 'A', 'C', 'B'}
 ```
