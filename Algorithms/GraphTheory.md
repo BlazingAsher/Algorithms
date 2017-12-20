@@ -18,8 +18,6 @@
 A graph data structure consists of a finite , *and possibly mutable*, set of ordered pairs, called edges or arcs, of certain entities called nodes or vertices. A graph is represented by a pair of two sets `G<V, E>`
 where `V` is the set of vertices and `E` is the set of edges
 
-<!-- why e' -->
-
 ## graph terminology
 + A `undirected` graph is a graph with edges represented as sets of 2 vertices (unordered) e = {a, b}. A `directed` graph is a graph with edges represented as ordered pairs (tuples) e' = (a,b).
 Most graphs are either are directed or undirected but a mix of both also exists
