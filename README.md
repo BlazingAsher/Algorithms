@@ -22,7 +22,3 @@ The aim of this repository is to provide markdown lessons for advanced programmi
 | CCC           | 14 Feb 2018                                                 |
 | CCO           | 14-18 May 2018                                                |
 | International Olympiad in Informatics [IOI] | 01 - 08 Sept 2018             |
-
-#### Editor's Notes
-+ Lessons will be posted at least one day before the club is held
-+ Solutions will not be posted, but lessons are going to have an easier version of the problems with their solutions
