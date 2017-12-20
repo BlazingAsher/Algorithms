@@ -12,12 +12,12 @@
 <!-- /TOC -->
 
 # Graph Search
-Navigating through a graph is one of the very first uses for graphs. The way you implement graph traversal varries depending on what you want to achieve. Some applications include web
+Navigating through a graph is one of the very first uses for graphs. The way you implement graph traversal varries depending on what you want to achieve. Some applications include:
 + Web crawling
 + Pathfinding
 + Finding shortest paths
 + Maze generation
-+ finding all vertices within one connected component;
++ finding all vertices within one connected component
 
 **BFS pathfinding algorithm**
 
@@ -63,7 +63,7 @@ bfs(start = 1, Adj = {1:{2,3},2:{5,4,1},3:{1,6},4:{2},5:{2},6:{3,7},7:{6}})
 ![](Images/img5.png)
 
 ## Depth First Search
-DFS recursively explores a graph with simple recursive code.
+DFS is much more intuitive than BFS in traversal although it is the recursive approach. DFS traverses into a child of a starting node then goes to it's child and so on until there is no more cildren then it backtracks.
 
 ### figure 3
 **DFS in action**
