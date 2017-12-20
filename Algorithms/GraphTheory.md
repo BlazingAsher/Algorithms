@@ -2,12 +2,12 @@
 <!-- TOC -->
 
 - [Graph Theory Intro](#graph-theory-intro)
-    - [graph terminology](#graph-terminology)
         - [Figure 1](#figure-1)
-        - [Figure 2](#figure-2)
-        - [Figure 3](#figure-3)
     - [A node](#a-node)
     - [An Edge](#an-edge)
+        - [Figure 2](#figure-2)
+        - [Figure 3](#figure-3)
+    - [graph terminology](#graph-terminology)
     - [ways to implement a graph](#ways-to-implement-a-graph)
         - [Figure 4](#figure-4)
     - [Trees](#trees)
@@ -21,31 +21,9 @@
 A graph data structure consists of a finite , *and possibly mutable*, set of ordered pairs, called edges or arcs, of certain entities called nodes or vertices. A graph is represented by a pair of two sets `G<V, E>`
 where `V` is the set of vertices and `E` is the set of edges
 
-## graph terminology
-+ A `undirected` graph is a graph with edges represented as sets of 2 vertices (unordered) e = {a, b}. A `directed` graph is a graph with edges represented as ordered pairs (tuples) e' = (a,b).
-Most graphs are either are directed or undirected but a mix of both also exists
-
->[Fig. 1](#figure-1) is neither directed nor nondirected graph
->because not all vertecies are directed like the node
->connecting node 3 and node 8.
-
-
-+ A graph is connected if there is an x,y path for x, y ∈ V
-
->[Fig. 1](#figure-1) is an example of a disconnected graph.
-
 
 ### Figure 1
 ![](Images/img1.png)
->[Fig. 2](#figure-2) is an example of a connected graph
-+ a graph's `diameter` is the longest shortest path in a connected graph without backtracking or repeating edges or nodes, refer to the yellow path in [Fig. 3](#figure-3).
-
-### Figure 2
-![](Images/img2.png)
-
-### Figure 3
-![](Images/img3.png)
-
 
 ## A node
 Represented as a little circle (Red in fig. 1).
@@ -62,6 +40,28 @@ Represented as a line connecting nodes.
 + `Weighted graphs` have distances on their edges (In [Fig. 1](#figure-1) edge connecting node 1 and node 3)
 + `directed graphs` have directed edges like (In [Fig. 1](#figure-1) edge connecting node 3 and node 8)
 + `cycle` is a path of edges that go in a 'cycle' back to the starting node
+
+>[Fig. 2](#figure-2) is an example of a connected graph
++ a graph's `diameter` is the longest shortest path in a connected graph without backtracking or repeating edges or nodes, refer to the yellow path in [Fig. 3](#figure-3).
+
+### Figure 2
+![](Images/img2.png)
+### Figure 3
+![](Images/img3.png)
+
+## graph terminology
++ A `undirected` graph is a graph with edges represented as sets of 2 vertices (unordered) e = {a, b}. A `directed` graph is a graph with edges represented as ordered pairs (tuples) e' = (a,b).
+Most graphs are either are directed or undirected but a mix of both also exists
+
+>[Fig. 1](#figure-1) is neither directed nor nondirected graph
+>because not all vertecies are directed like the node
+>connecting node 3 and node 8.
+
+
++ A graph is connected if there is an x,y path for x, y ∈ V
+
+>[Fig. 1](#figure-1) is an example of a disconnected graph.
+
 
 <!-- + `Walk` is a sequence of vertices and edges
 
