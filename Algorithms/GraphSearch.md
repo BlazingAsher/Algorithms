@@ -22,9 +22,7 @@ Navigating through a graph is one of the very first uses for graphs. The way you
 
 **BFS pathfinding algorithm**
 
-<!-- ![](images/gif1.gif) -->
-<img src = "images/gif1.gif"></img>
-![](https://github.com/YusufTaha/Algorithms/blob/master/Algorithms/Images/gif1.gif?raw=true)
+![](Images/gif1.gif)
 ## Breadth First Search
 BFS is one of the most famous graph traversal algorithms because of how broad it can search. In other words, BFS explores the starting node's neighbours before going to the next level of nodes.
 > BFS is shown in [Fig. 1](###figure-1)
@@ -32,7 +30,7 @@ BFS is one of the most famous graph traversal algorithms because of how broad it
 ### figure 1
 **BFS in action**
 
-![](images/gif2.gif)
+![](Images/gif2.gif)
 
 ### Python BFS
 ```python
@@ -63,14 +61,14 @@ bfs(start = 1, Adj = {1:{2,3},2:{5,4,1},3:{1,6},4:{2},5:{2},6:{3,7},7:{6}})
 
 
 #### figure 2
-![](images/img5.png)
+![](Images/img5.png)
 
 ## Depth First Search
 DFS recursively explores a graph with simple recursive code.
 
 ### figure 3
 **DFS in action**
-![](images/gif3.gif)
+![](Images/gif3.gif)
 ```python
 def dfs(start :int, Adj :dict):
     parent = {start: None}
