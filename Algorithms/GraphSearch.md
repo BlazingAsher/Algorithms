@@ -22,7 +22,8 @@ Navigating through a graph is one of the very first uses for graphs. The way you
 
 **BFS pathfinding algorithm**
 
-![](images/gif1.gif)
+<!-- ![](images/gif1.gif) -->
+<img src = "images/gif1.gif"></img>
 
 ## Breadth First Search
 BFS is one of the most famous graph traversal algorithms because of how broad it can search. In other words, BFS explores the starting node's neighbours before going to the next level of nodes.
