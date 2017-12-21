@@ -33,7 +33,7 @@ BFS is one of the most famous graph traversal algorithms because of how broad it
 
 ### Python BFS
 ```python
-def bfs(start :int, Adj :dict):
+def bfs(start :object, Adj :dict):
     level  = {start: None} # {node: distance to starting node (# edges)}
     parent = {start: None} # the parent hash is optional but helps
                            # backtrack for shortest paths
