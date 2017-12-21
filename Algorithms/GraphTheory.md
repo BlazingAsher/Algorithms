@@ -12,7 +12,7 @@
         - [Figure 4](#figure-4)
     - [Trees](#trees)
     - [Connected components](#connected-components)
-        - [Figure 4](#figure-4-1)
+        - [Figure 5](#figure-5)
 
 <!-- /TOC -->
 
@@ -105,5 +105,5 @@ A `tree` is a connected graph with no trees The edges of a tree are known as bra
 A `component` of an undirected graph is a subgraph that is completely disconnected than the other components
 >[Fig. 5](#figure-5) shows a graph with 4 components
 
-### Figure 4
+### Figure 5
 ![](Images/img6.png)
