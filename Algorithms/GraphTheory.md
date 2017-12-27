@@ -1,7 +1,7 @@
 **Table Of Contents**
 <!-- TOC -->
 
-- [Graph Theory Intro](#graph-theory-intro)
+- [Graph Theory](#graph-theory)
         - [Figure 1](#figure-1)
     - [A node](#a-node)
     - [An Edge](#an-edge)
@@ -16,7 +16,7 @@
 
 <!-- /TOC -->
 
-# Graph Theory Intro
+# Graph Theory
 
 A graph data structure consists of a finite , *and possibly mutable*, set of ordered pairs, called edges or arcs, of certain entities called nodes or vertices. A graph is represented by a pair of two sets `G<V, E>`
 where `V` is the set of vertices and `E` is the set of edges
