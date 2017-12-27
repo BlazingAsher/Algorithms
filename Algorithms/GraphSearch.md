@@ -1,4 +1,4 @@
-**Table Of Conetents**
+**Table Of Contents**
 <!-- TOC -->
 
 - [Graph Search](#graph-search)
@@ -12,7 +12,7 @@
 <!-- /TOC -->
 
 # Graph Search
-Navigating through a graph is one of the very first uses for graphs. The way you implement graph traversal varries depending on what you want to achieve. Some applications include:
+Navigating through a graph is one of the very first uses for graphs. The way you implement graph traversal varies depending on what you want to achieve. Some applications include:
 + Web crawling
 + Pathfinding
 + Finding shortest paths
@@ -23,7 +23,7 @@ Navigating through a graph is one of the very first uses for graphs. The way you
 
 ![](Images/gif1.gif)
 ## Breadth First Search
-BFS is one of the most famous graph traversal algorithms because of how broad it can search. In other words, BFS explores the starting node's neighbours before going to the next level of nodes.
+BFS is one of the most famous graph traversal algorithms because of how broad it can search. In other words, BFS explores the starting node's neighbors before going to the next level of nodes.
 > BFS is shown in [Fig. 1](###figure-1)
 
 ### figure 1
@@ -63,7 +63,7 @@ bfs(start = 1, Adj = {1:{2,3},2:{5,4,1},3:{1,6},4:{2},5:{2},6:{3,7},7:{6}})
 ![](Images/img5.png)
 
 ## Depth First Search
-DFS is much more intuitive than BFS in traversal although it is the recursive approach. DFS traverses into a child of a starting node then goes to it's child and so on until there is no more cildren then it backtracks.
+DFS is much more intuitive than BFS in traversal although it is the recursive approach. DFS traverses into a child of a starting node then goes to it's child and so on until there is no more children then it backtracks.
 
 ### figure 3
 **DFS in action**

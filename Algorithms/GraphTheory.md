@@ -1,4 +1,4 @@
-**Table Of Conetents**
+**Table Of Contents**
 <!-- TOC -->
 
 - [Graph Theory Intro](#graph-theory-intro)
@@ -53,8 +53,8 @@ Represented as a line connecting nodes.
 + A `undirected` graph is a graph with edges represented as sets of 2 vertices (unordered) e = {a, b}. A `directed` graph is a graph with edges represented as ordered pairs (tuples) e' = (a,b).
 Most graphs are either are directed or undirected but a mix of both also exists
 
->[Fig. 1](#figure-1) is neither directed nor nondirected graph
->because not all vertecies are directed like the node
+>[Fig. 1](#figure-1) is neither directed nor non-directed graph
+>because not all vertices are directed like the node
 >connecting node 3 and node 8.
 
 
@@ -80,7 +80,7 @@ Most graphs are either are directed or undirected but a mix of both also exists
 
 ## ways to implement a graph
 
-+ `Adjacency list` -> an array of size V with each element in the array pointing to a linked list. The array is indexed by a node (vertices from 0 to v-1) or a hash. where each index or key points to alinked list of adjacent verticies
++ `Adjacency list` -> an array of size V with each element in the array pointing to a linked list. The array is indexed by a node (vertices from 0 to v-1) or a hash. where each index or key points to a linked list of adjacent vertices
 
 + `Adjacency Matrix` -> a (0,1)-matrix represented by
 
@@ -90,9 +90,9 @@ a [#of nodes ⨉ # of nodes] 2D-array
 ### Figure 4
 ![](Images/img4.png)
 
-+ `OPP approach` -> where node is an object and has the attribute neighbours which stores the linked list
++ `OPP approach` -> where node is an object and has the attribute neighbors which stores the linked list
 
-+ `Implicit` -> where the adjacency of a node is a function or node.neghbours() is a method (which takes less space if you aren't going to use all verticies)
++ `Implicit` -> where the adjacency of a node is a function or node.neighbors() is a method (which takes less space if you aren't going to use all vertices)
 
 
 **Ignoring the implicit representation you need Θ(V + E) space to store graph**

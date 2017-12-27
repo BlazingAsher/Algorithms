@@ -1,4 +1,4 @@
-**Table Of Conetents**
+**Table Of Contents**
 <!-- TOC -->
 
 - [Recursion](#recursion)
@@ -17,14 +17,14 @@ To cook recursion you need:
 + A spoonful of base case
 + A cup of a self call that approaches the base case
 
-and you will have a working recursive program, bon apétit.
+and you will have a working recursive program, bon appétit.
 
 ## Fibonacci
 
 The Fib sequence is the classic recursive algorithm in mathematics and computer science, yet not the only one. Fib starts with first and second number being 1 (base cases) and each subsequent number is the sum of the previous 2 numbers.
 
 The implementation of this sequence can be either iterative or recursive. The following is python code for the recursive approach.
-> See [Fig. 1](###figure-1) for the callstack tree
+> See [Fig. 1](###figure-1) for the call-stack tree
 ```python
 def fib(number :int): # The index of the term you are looking for
     if number == 1 or number == 2:
@@ -35,11 +35,11 @@ def fib(number :int): # The index of the term you are looking for
 
 ### figure 1
 ![](Images/img7.png)
-Every node in the recursion tree calls 2 others if it has no return value yet and that goes on until all the tree's vertecies hit 1 or 0 which have a return defined as 1. Once all the tree's vertecies hit the 0 or 1 node it traces back to the parent node.
+Every node in the recursion tree calls 2 others if it has no return value yet and that goes on until all the tree's vertices hit 1 or 0 which have a return defined as 1. Once all the tree's vertices hit the 0 or 1 node it traces back to the parent node.
 
 ## Pascal's triangle
 
-pascal's triangle discretes the fibonacci sequence, the binomial cooficents , natural numbers , triangular numbers and many many more by a very simple idea.The following is python code for recursive pascal's triangle.
+pascal's triangle discrete the fibonacci sequence, the binomial coefficients , natural numbers , triangular numbers and many many more by a very simple idea.The following is python code for recursive pascal's triangle.
 > See [Fig. 2](###figure-2) for pascal's triangle
 
 ```Python
