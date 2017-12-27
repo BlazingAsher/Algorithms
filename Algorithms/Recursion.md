@@ -21,7 +21,7 @@ and you will have a working recursive program, bon apétit.
 
 ## Fibonacci
 
-The Fib sequence is the classic recursive algorithm in mathematics and computer science, yet not the only one. Fib starts with first and second number being 1 (<span style= "color:red">base cases</span>) and each subsequent number is the sum of the previous 2 numbers.
+The Fib sequence is the classic recursive algorithm in mathematics and computer science, yet not the only one. Fib starts with first and second number being 1 (base cases) and each subsequent number is the sum of the previous 2 numbers.
 
 The implementation of this sequence can be either iterative or recursive. The following is python code for the recursive approach.
 > See [Fig. 1](###figure-1) for the callstack tree
@@ -55,4 +55,4 @@ def pascal(coloumn :int, row :int):
 
 To build the triangle, start with "1" at the top with 2 other "1"s under it, then continue placing numbers below it in a triangular pattern.
 
-<span style = "color:#737373">Each number is the numbers directly above it added together.</span>
+Each number is the numbers directly above it added together.
