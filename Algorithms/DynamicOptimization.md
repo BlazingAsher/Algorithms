@@ -39,12 +39,12 @@ Optimal solution is
 + The current value can be broken down into one plus the minimum of the function called on the current value - 1, the current value - 6, and the current value - 15
 
 ```python
-def mincents(number :int):
+def cnt(number :int):
     if number == 0:
         return 0
     if number < 0:
         return 1e+9
-    return 1 + min([mincents(number-1),mincents(number-6),mincents(number-15)])
+    return 1 + min([cnt(number-1),cnt(number-6),cnt(number-15)])
 ```
 **Cases**:
 + 1 : 1
@@ -56,5 +56,30 @@ def mincents(number :int):
 
 As you can see this is extremely inefficient as it has ,asymptotically, *O*(3ⁿ) time complexity. A lot of the computations are repeated, see [Fig.1](#figure-1)
 ### figure 1
+![](Images/img9.png)
+cnt(3) subtree is computed twice, cnt(2) is computed thrice and their subtrees are computed even more. For larger inputs this throttles the algorithm dramatically making it extremely inefficient.
 ## Memoization
-Most of the computations are calculated more than once which is unnecessary. The solution is **memoizing** and as the name suggests the recursive algorithm is set up to realize overlapping solution subtrees.
+Most of the computations are calculated more than once which is unnecessary. The solution is **memoizing** ,a type of dynamic optimization, and as the name suggests the recursive algorithm is set up to realize overlapping solution subtrees.
+
+To optimize a recursive solution to a memoized one you need:
++ A cup of hash-map or list of previous computations
++ A spoonful of saving computations to previous computations if they aren't already, if they are just return the key in the hash
+
+```python
+memo = [1e+9 for i in range(5000)] # Since we are comparing mins fill memo with arbitrarily large numbers
+
+def cnt(number :int):
+    if memo[number] > 1e+9:
+        return memo[number]
+    elif number == 0:
+        return 0
+    elif number < 0:
+        return 1e+9
+    # The memoization
+    if memo[number] == 1e+9:
+        memo[number] = 1 + min([cnt(number-1),cnt(number-6),cnt(number-15)])
+        return memo[number]
+    else:
+        return memo[number]
+```
+And Tadaa! passing in 100 runs in no time.
