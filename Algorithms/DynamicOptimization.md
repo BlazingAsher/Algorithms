@@ -7,6 +7,7 @@
         - [Pure Recursion](#pure-recursion)
         - [figure 1](#figure-1)
     - [Memoization](#memoization)
+    - [Bottom-up](#bottom-up)
 
 <!-- /TOC -->
 
@@ -66,20 +67,51 @@ To optimize a recursive solution to a memoized one you need:
 + A spoonful of saving computations to previous computations if they aren't already, if they are just return the key in the hash
 
 ```python
-memo = [1e+9 for i in range(5000)] # Since we are comparing mins fill memo with arbitrarily large numbers
+cache = [1e+9 for i in range(5000)] # Since we are comparing mins fill list with arbitrarily large numbers
 
-def cnt(number :int):
-    if memo[number] > 1e+9:
-        return memo[number]
+def mem_cnt(number :int):
+    if cache[number] > 1e+9:
+        return cache[number]
     elif number == 0:
         return 0
     elif number < 0:
         return 1e+9
     # The memoization
-    if memo[number] == 1e+9:
-        memo[number] = 1 + min([cnt(number-1),cnt(number-6),cnt(number-15)])
-        return memo[number]
+    if cache[number] == 1e+9:
+        cache[number] = 1 + min([cnt(number-1),cnt(number-6),cnt(number-15)])
+        return cache[number]
     else:
-        return memo[number]
+        return cache[number]
 ```
 And Tadaa! passing in 100 runs in no time.
+
+## Bottom-up
+Sometimes the function overhead exceeds the recursion depth in the stack, even if it is memoized. The workaround is coming up with a bottom up solution that starts at the tree's farthest child instead of the argument as a parent.
+
+So we will initialize the cache list except start at cache[0] = 0 and work your our up:
+
+```
+cache[1] is cache[0] + 1
+cache[2] is cache[1] + 1
+⠇
+cache[10] is min(cache[4] + 1, cache[9] + 1)
+⠇
+cache[18] is min(cache[17] + 1, cache[12] + 1, cache[3] + 1)
+⠇
+etc.
+```
+like so:
+```python
+def bu_cnt(a):
+    cache = [1e+9 for i in range(5000)]
+    cache[0] = 0
+    for i in range(1,a+1):
+        if i >= 1:
+            cache[i] = min(cache[i], cache[i-1] + 1)
+        if i >= 6:
+            cache[i] = min(cache[i], cache[i-6] + 1)
+        if i >= 15:
+            cache[i] = min(cache[i], cache[i-15] + 1)
+    return cache[a]
+```
+Now if you pass in 2e+9 it will take its time ,but it will never run out of stack space due to the absence of recursion and function overhead.
