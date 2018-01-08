@@ -7,4 +7,4 @@
 + [Combining Riceballs](http://wcipeg.com/problem/ccc16s4)
 
 # Graph Theory
-+ [Rank](http://wcipeg.com/problem/acsl1p4)
++ [Maze](http://wcipeg.com/problem/ccc08s3)
