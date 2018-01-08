@@ -35,6 +35,7 @@ def fib(number :int): # The index of the term you are looking for
 
 ### figure 1
 ![](Images/img7.png)
+
 Every node in the recursion tree calls 2 others if it has no return value yet and that goes on until all the tree's vertices hit 1 or 0 which have a return defined as 1. Once all the tree's vertices hit the 0 or 1 node it traces back to the parent node.
 
 ## Pascal's triangle
