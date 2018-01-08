@@ -5,13 +5,13 @@ The aim of this repository is to provide markdown lessons for advanced programmi
 #### The Repo's structure
 
         ├── Algorithms
-        │   ├── Images     // assets folder
+        │   ├── Images     # assets folder
         │   ├── Recursion.md
         │   ├── DynamicOptimization.md
         │   ├── GraphTheory.md
         │   ├── ... .md
         |   |
-        ├── Problems.md     // will contain links to problems
+        ├── Problems.md     # will contain links to problems
 
 ### Contests
 | Contest        | Date                                                       |
