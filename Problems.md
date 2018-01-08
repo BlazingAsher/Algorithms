@@ -8,3 +8,5 @@
 
 # Graph Theory
 + [Maze](http://wcipeg.com/problem/ccc08s3)
+# Prefix Sums
++ [Lil jami](http://wcipeg.com/problem/liljami)
