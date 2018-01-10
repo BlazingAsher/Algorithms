@@ -62,24 +62,32 @@ Ending house is any house that could be at the end of reach, while 0 is the star
 it is false to assume that the best ending position is the last one that can reach from the start,
 because perhaps there are ones from the other side that would have fit had the rope been able to extend more
 ``` python
-
-def hydrantsNeeded(size :int): # Given a distance, we see the minimum number of hydrants needed
-    hydrants = numHouses           # Worst case scenario, a hydrant is placed at each house
+# Given a distance, we see the
+# minimum number of hydrants needed
+def hydrantsNeeded(size :int):
+    # Worst case scenario, a hydrant is placed at each house
+    hydrants = numHouses
     endingHouse = 0
 
     while endingHouse < numHouses and houses[endingHouse] <= houses[0]+size:
-        needed = 1                 # The number of hydrants we need, starts at 1 to connect the end house and the house at index 0
+        # The number of hydrants we need, starts at 1 to connect
+        # the end house and the house at index 0
+        needed = 1
         end = houses[endingHouse]
         checkHouses = endingHouse+1
 
-        while checkHouses < numHouses and houses[checkHouses] < houses[endingHouse]-size+1000000: # Make sure not to go out of index, and not to connect another hydrant if it reaches through the starting hose
-            if houses[checkHouses] > end: # If it is out of reach, make a new hydrant
+        # Make sure not to go out of index, and not to connect another hydrant
+        # if it reaches through the starting hose
+        while checkHouses < numHouses and houses[checkHouses] < houses[endingHouse]-size+1000000:
+            # If it is out of reach, make a new hydrant
+            if houses[checkHouses] > end:
             end = houses[checkHouses] + size
             needed += 1
 
         checkHouses += 1
 
-    hydrants = min(needed,hydrants) # set hydrants to the minimum possible value it could be
+    # set hydrants to the minimum possible value it could be
+    hydrants = min(needed,hydrants)
     endingHouse += 1
 
     return hydrants
