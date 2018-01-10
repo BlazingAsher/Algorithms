@@ -1,6 +1,7 @@
 <!-- TOC -->
 
 - [Coordinate Compression](#coordinate-compression)
+    - [Implementation](#implementation)
 
 <!-- /TOC -->
 # Coordinate Compression
@@ -13,13 +14,14 @@ Here’s an example. Suppose I get a question that asks for the largest overlap 
     ↓                                    ↓
     2                                    2
 ```
+
+## Implementation
 Coordinate compression takes all the X co-ordinates given and all the Y co-ordinates given (and any other amount of co-ordinates).We sort them out, and then reassign all of them to their index.  Let's take the first test case
 ```python
     listY = [20, 25, 30, 40]
     listx = [20, 25, 50]
 ```
 So instead of having two rectangles at sides **(20, 20, 40, 50)** and **(25, 25, 30, 50)**; they become **(0,0,3,2)** and **(1,1,2,3)**. I can now solve for that very efficiently and get the same output. Keep in mind that sometimes we will need to refer back to our **listX** and **listY**, to find out the true value of our positions.
-
 **Example**: [Tinted Glass](http://wcipeg.com/problem/ccc14s4)
 ```python
 # input and variables
