@@ -1,6 +1,7 @@
 <!-- TOC -->
 
 - [Prefix Sums](#prefix-sums)
+    - [figure 1](#figure-1)
     - [Implementation](#implementation)
 
 <!-- /TOC -->
@@ -11,9 +12,12 @@ idea is to have an array (or list) of length N, and update its values as the inp
 items in the portion they ask for. That is rather inefficient though, as you will perform *O*(N*K) operations, which could be up to
 1e+12 (in Lil jami’s case).That is where the need of an algorithm comes in. The goal is to change your array, so that you will perform minimal operations once
 asked to.
+## figure 1
+![](Images/img10.png)
 
  Given an array `[a, b, c, d]`, we can convert each item to be the sum of all the items before it and itself. This changes our array to `[a, a+b, a+b+c, a+b+c
  +d]`. With this new array, simply subtract to find the sum wanted.
+> Example array in figure 1 [Fig. 1](##figure-1)
 
 **Example:** If we wanted to find the value of c+d
 ```python
