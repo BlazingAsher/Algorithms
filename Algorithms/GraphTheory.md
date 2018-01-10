@@ -18,8 +18,8 @@
 
 # Graph Theory
 
-A graph data structure consists of a finite , *and possibly mutable*, set of ordered pairs, called edges or arcs, of certain entities called nodes or vertices. A graph is represented by a pair of two sets `G<V, E>`
-where `V` is the set of vertices and `E` is the set of edges
+A graph data structure consists of a finite , *and possibly mutable*, set of ordered pairs, called edges or arcs, of certain entities called nodes or vertices. A graph is represented by a pair of two sets **G<V, E>**
+where **V** is the set of vertices and **E** is the set of edges
 
 
 ### Figure 1
@@ -30,7 +30,7 @@ Represented as a little circle (Red in fig. 1).
 + A `Degree` or `Valency` denoted 𝛿(v) is how many edges are connected to a node
 >Count loops as 2 edges in valency
 + `Isolated node` is a node with degree 0 (in [Fig. 1](#figure-1) node 10)
-+ `adjacent vertices`  to a node are vertices that are directly connected to it. ex -> [Fig. 1](#figure-1) node (2) has an adjacency array Adj[2] = [1,6]
++ `adjacent vertices`  to a node are vertices that are directly connected to it. ex -> [Fig. 1](#figure-1) node (2) has an adjacency array **Adj[2]** = [1,6]
 
 ## An Edge
 Represented as a line connecting nodes.
@@ -50,7 +50,7 @@ Represented as a line connecting nodes.
 ![](Images/img3.png)
 
 ## graph terminology
-+ A `undirected` graph is a graph with edges represented as sets of 2 vertices (unordered) e = {a, b}. A `directed` graph is a graph with edges represented as ordered pairs (tuples) e' = (a,b).
++ A `undirected` graph is a graph with edges represented as sets of 2 vertices (unordered) **e = {a, b}**. A `directed` graph is a graph with edges represented as ordered pairs (tuples) **e' = (a,b)**.
 Most graphs are either are directed or undirected but a mix of both also exists
 
 >[Fig. 1](#figure-1) is neither directed nor non-directed graph
@@ -58,7 +58,7 @@ Most graphs are either are directed or undirected but a mix of both also exists
 >connecting node 3 and node 8.
 
 
-+ A graph is connected if there is an x,y path for x, y ∈ V
++ A graph is connected if there is an **x,y** path for **x, y ∈ V**
 
 >[Fig. 1](#figure-1) is an example of a disconnected graph.
 
@@ -80,12 +80,12 @@ Most graphs are either are directed or undirected but a mix of both also exists
 
 ## ways to implement a graph
 
-+ `Adjacency list` -> an array of size V with each element in the array pointing to a linked list. The array is indexed by a node (vertices from 0 to v-1) or a hash. where each index or key points to a linked list of adjacent vertices
++ `Adjacency list` -> an array of size **V** with each element in the array pointing to a linked list. The array is indexed by a node (vertices from 0 to v-1) or a hash. where each index or key points to a linked list of adjacent vertices
 
 + `Adjacency Matrix` -> a (0,1)-matrix represented by
 
 a [#of nodes ⨉ # of nodes] 2D-array
-> [Fig. 4](#figure-4) represents a graph and it's Adjacency matrix where the array at Adj[i][j] represents edge between i and j and the number denotes the multiplicity of the edges.
+> [Fig. 4](#figure-4) represents a graph and it's Adjacency matrix where the array at **Adj[i][j]** represents edge between **i** and **j** and the number denotes the multiplicity of the edges.
 
 ### Figure 4
 ![](Images/img4.png)

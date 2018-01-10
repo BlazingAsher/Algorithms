@@ -57,12 +57,12 @@ def cnt(number :int):
 + 18: 3
 + 100: 10 `This one takes approximately 6 years of computation in pure recursion`
 
-As you can see this is extremely inefficient as it has ,asymptotically, *O*(3ⁿ) time complexity. A lot of the computations are repeated, see [Fig.1](#figure-1)
+As you can see this is extremely inefficient as it has ,asymptotically, __*O*(3ⁿ)__ time complexity. A lot of the computations are repeated, see [Fig.1](#figure-1)
 ### figure 1
 ![](Images/img9.png)
-cnt(3) subtree is computed twice, cnt(2) is computed thrice and their subtrees are computed even more. For larger inputs this throttles the algorithm dramatically making it extremely inefficient.
+**cnt(3)** subtree is computed twice, **cnt(2)** is computed thrice and their subtrees are computed even more. For larger inputs this throttles the algorithm dramatically making it extremely inefficient.
 ## Memoization
-Most of the computations are calculated more than once which is unnecessary. The solution is **memoizing** ,a type of dynamic optimization, and as the name suggests the recursive algorithm is set up to realize overlapping solution subtrees.
+Most of the computations are calculated more than once which is unnecessary. The solution is `memoizing` ,a type of dynamic optimization, and as the name suggests the recursive algorithm is set up to realize overlapping solution subtrees.
 
 To optimize a recursive solution to a memoized one you need:
 + A cup of hash-map or list of previous computations
@@ -90,7 +90,7 @@ And Tadaa! passing in 100 runs in no time.
 ## Bottom-up
 Sometimes the function overhead exceeds the recursion depth in the stack, even if it is memoized. The workaround is coming up with a bottom up solution that starts at the tree's farthest child instead of the argument as a parent.
 
-So we will initialize the cache list except start at cache[0] = 0 and work your our up:
+So we will initialize the cache list except start at `cache[0] = 0` and work your our up:
 
 ```
 cache[1] is cache[0] + 1
