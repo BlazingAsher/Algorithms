@@ -71,7 +71,7 @@ To optimize a recursive solution to a memoized one you need:
 ```python
 cache = [1e+9 for i in range(5000)] # Since we are comparing mins fill list with arbitrarily large numbers
 
-def mem_cnt(number :int):
+def memCnt(number :int):
     if cache[number] > 1e+9:
         return cache[number]
     elif number == 0:
@@ -104,7 +104,7 @@ etc.
 ```
 ### Implementation
 ```python
-def bu_cnt(a):
+def buCnt(number :int):
     cache = [1e+9 for i in range(5000)]
     cache[0] = 0
     for i in range(1,a+1):
@@ -114,6 +114,6 @@ def bu_cnt(a):
             cache[i] = min(cache[i], cache[i-6] + 1)
         if i >= 15:
             cache[i] = min(cache[i], cache[i-15] + 1)
-    return cache[a]
+    return cache[number :int]
 ```
 Now if you pass in 2e+9 it will take its time ,but it will never run out of stack space due to the absence of recursion and function overhead.

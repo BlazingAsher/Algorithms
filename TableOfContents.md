@@ -31,3 +31,7 @@ Problems:
 #### __[lesson](Algorithms/CoordinateCompression)__
 Problems:
 + [Tinted Glass](http://wcipeg.com/problem/ccc14s4)
+# Binary Search
+#### __[lesson](Algorithms/BinarySearch)__
+Problems:
++ [Firehose](http://wcipeg.com/problem/ccc10s3)
