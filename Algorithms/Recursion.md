@@ -3,8 +3,10 @@
 
 - [Recursion](#recursion)
     - [Fibonacci](#fibonacci)
+    - [Implementation](#implementation)
         - [figure 1](#figure-1)
     - [Pascal's triangle](#pascals-triangle)
+    - [Implementation](#implementation-1)
         - [figure 2](#figure-2)
 
 <!-- /TOC -->
@@ -25,6 +27,7 @@ The Fib sequence is the classic recursive algorithm in mathematics and computer 
 
 The implementation of this sequence can be either iterative or recursive. The following is python code for the recursive approach.
 > See [Fig. 1](###figure-1) for the call-stack tree
+## Implementation
 ```python
 def fib(number :int): # The index of the term you are looking for
     if number == 1 or number == 2:
@@ -43,6 +46,7 @@ Every node in the recursion tree calls 2 others if it has no return value yet an
 pascal's triangle discrete the fibonacci sequence, the binomial coefficients , natural numbers , triangular numbers and many many more by a very simple idea.The following is python code for recursive pascal's triangle.
 > See [Fig. 2](###figure-2) for pascal's triangle
 
+## Implementation
 ```Python
 def pascal(coloumn :int, row :int):
     if coloumn == 0 or row == coloumn:

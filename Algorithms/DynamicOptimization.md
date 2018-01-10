@@ -4,10 +4,12 @@
 - [Dynamic Optimization](#dynamic-optimization)
     - [Sample problem](#sample-problem)
         - [The Greedy Solution](#the-greedy-solution)
-        - [Pure Recursion](#pure-recursion)
+        - [Pure Recursion Implementation](#pure-recursion-implementation)
         - [figure 1](#figure-1)
     - [Memoization](#memoization)
+        - [Implementation](#implementation)
     - [Bottom-up](#bottom-up)
+        - [Implementation](#implementation-1)
 
 <!-- /TOC -->
 
@@ -35,7 +37,7 @@ Greedy algorithms work on many problems, but this is not one of them.
 Optimal solution is
 
      6 + 6 + 6 → 3
-### Pure Recursion
+### Pure Recursion Implementation
 + The base case spoonful is zero
 + The current value can be broken down into one plus the minimum of the function called on the current value - 1, the current value - 6, and the current value - 15
 
@@ -65,7 +67,7 @@ Most of the computations are calculated more than once which is unnecessary. The
 To optimize a recursive solution to a memoized one you need:
 + A cup of hash-map or list of previous computations
 + A spoonful of saving computations to previous computations if they aren't already, if they are just return the key in the hash
-
+### Implementation
 ```python
 cache = [1e+9 for i in range(5000)] # Since we are comparing mins fill list with arbitrarily large numbers
 
@@ -100,7 +102,7 @@ cache[18] is min(cache[17] + 1, cache[12] + 1, cache[3] + 1)
 ⠇
 etc.
 ```
-like so:
+### Implementation
 ```python
 def bu_cnt(a):
     cache = [1e+9 for i in range(5000)]

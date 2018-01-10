@@ -4,10 +4,11 @@
 - [Graph Search](#graph-search)
     - [Breadth First Search](#breadth-first-search)
         - [figure 1](#figure-1)
-        - [Python BFS](#python-bfs)
-            - [figure 2](#figure-2)
+        - [Implementation](#implementation)
+        - [figure 2](#figure-2)
     - [Depth First Search](#depth-first-search)
         - [figure 3](#figure-3)
+        - [Implementation](#implementation-1)
 
 <!-- /TOC -->
 
@@ -31,7 +32,7 @@ BFS is one of the most famous graph traversal algorithms because of how broad it
 
 ![](Images/gif2.gif)
 
-### Python BFS
+### Implementation
 ```python
 def bfs(start :object, Adj :dict):
     level  = {start: None} # {node: distance to starting node (# edges)}
@@ -59,7 +60,7 @@ bfs(start = 1, Adj = {1:{2,3},2:{5,4,1},3:{1,6},4:{2},5:{2},6:{3,7},7:{6}})
 
 
 
-#### figure 2
+### figure 2
 ![](Images/img5.png)
 
 ## Depth First Search
@@ -68,6 +69,7 @@ DFS is much more intuitive than BFS in traversal although it is the recursive ap
 ### figure 3
 **DFS in action**
 ![](Images/gif3.gif)
+### Implementation
 ```python
 def dfs(graph, start, visited=None):
     if visited is None:
