@@ -60,12 +60,14 @@ So to go from `[0,0,0,0,0,0]` to `[0,2,2,2,2,0]`, we would increment **A[1]** by
 
 &nbsp;For [Wireless](http://wcipeg.com/problem/ccc09s5), we need to count the number of bit rates attainable at every intersection. After that, we get the largest number and its count. Given these circles, how do we make our array of intersections?
 ## Implementation
-&nbsp;First, we need a 2D array, but we will be applying single array Difference arrays. The reason is because we are given the points to increment in the form of a circle, not a box.
+&nbsp;First, we need a 2D [Difference arrays](https://github.com/YusufTaha/Algorithms/blob/master/Algorithms/2dPrefixSumsAndDiffrenceArrays.md) __(next chapter)__, but we will be applying single array Difference arrays. The reason is because we are given the points to increment in the form of a circle, not a box.
+
 ```python
 spots = [ [0 for a in range(lenY)] for b in range(lenX) ]
 ```
-For every item given, loop through and get **x,y,r,s** Loop through all y coordinates of the circle
-Find both values of **x** in given **y**. Set the one with smaller index (or at index 0 if none exist) to += **s**, Set the larger index to += **s**.
-Once done, apply the prefix sum algorithm to all arrays in spots.
-Then find the largest number and its count
++ For every item given, loop through and get **x,y,r,s**
++ Loop through all y coordinates of the circle
++ Find both values of **x** in given **y**. Set the one with smaller index (or at index 0 if none exist) to += **s**, Set the larger index to += **s**.
++ Once done, apply the prefix sum algorithm to all arrays in spots.
++ Then find the largest number and its count
 <!-- Need code -->
