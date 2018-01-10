@@ -20,3 +20,4 @@
 
 # 2D Prefix Sums & Difference Arrays
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; __[lesson](Algorithms/2dPrefixSums&DiffrenceArrays.md)__
++ [The Cake is a Dessert](http://wcipeg.com/problem/cake)
