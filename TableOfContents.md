@@ -32,6 +32,6 @@ Problems:
 Problems:
 + [Tinted Glass](http://wcipeg.com/problem/ccc14s4)
 # Binary Search
-#### __[lesson](Algorithms/BinarySearc.md)__
+#### __[lesson](Algorithms/BinarySearch.md)__
 Problems:
 + [Firehose](http://wcipeg.com/problem/ccc10s3)
