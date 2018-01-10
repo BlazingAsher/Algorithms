@@ -91,3 +91,40 @@ The reason the -2 is there is because it’s still affected by the increment at 
 
 Now let's take up a question. [The Cake is a Dessert](http://wcipeg.com/problem/cake).
 ## Implementation
+```python
+def prefixSum(diagram):
+    for row in diagram:             # Adding up all the horizontal ones
+        for cell in range(1,len(row)):
+            row[cell] += row[cell-1]
+    for x in range(1,len(diagram)): # Add all the vertical ones
+        for y in range(len(diagram[x])):
+            diagram[x][y] += diagram[x-1][y]
+    return diagram
+
+x,y,num = [int(e) for e in input().split()]
+diagram = [[0 for a in range(y)] for b in range (x)]
+
+for item in range(num):             # Incrementing our 2D difference array
+    x1,y1,x2,y2 = [int(e)-1 for e in input().split()]
+    diagram[x1][y1] += 1
+    if x2+1 < x:
+        diagram[x2+1][y1] -= 1
+    if y2+1 < y:
+        diagram[x1][y2+1] -= 1
+        if x2+1 < x:
+            diagram[x2+1][y2+1] += 1
+
+normalArray = prefixSum(diagram)      # Turning it to the normal array
+prefixArray = prefixSum(normalArray)  # Getting a prefix sum array
+for a in range(int(input())):         # Printing result
+    x1,y1,x2,y2 = [int(e)-1 for e in input().split()]
+    total = prefixArray[x2][y2]
+    if x1-1 >= 0:
+        total -= prefixArray[x1-1][y2]
+    if y1-1 >= 0:
+        total -= prefixArray[x2][y1-1]
+        if x1-1 >= 0:
+            total += prefixArray[x1-1][y1-1]
+
+    print(total)
+```
