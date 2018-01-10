@@ -11,7 +11,7 @@ The aim of this repository is to provide markdown lessons for advanced programmi
         │   ├── GraphTheory.md
         │   ├── ... .md
         |   |
-        ├── Problems.md     # will contain links to problems
+        ├── Problems.md    # will contain links to problems
 
 ### Contests
 | Contest        | Date                                                       |
