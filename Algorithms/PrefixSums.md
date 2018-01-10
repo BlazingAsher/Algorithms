@@ -17,7 +17,7 @@ asked to.
 
  Given an array `[a, b, c, d]`, we can convert each item to be the sum of all the items before it and itself. This changes our array to `[a, a+b, a+b+c, a+b+c
  +d]`. With this new array, simply subtract to find the sum wanted.
-> Example array in figure 1 [Fig. 1](##figure-1)
+> Example array in [Fig. 1](##figure-1)
 
 **Example:** If we wanted to find the value of c+d
 ```python
