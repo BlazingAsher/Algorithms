@@ -71,3 +71,8 @@ spots = [ [0 for a in range(lenY)] for b in range(lenX) ]
 + Once done, apply the prefix sum algorithm to all arrays in spots.
 + Then find the largest number and its count
 <!-- Need code -->
+```python
+
+```
+
+<!-- loop through all y values of circele get x from x = sqrt r**2 - y**2 -->

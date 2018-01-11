@@ -90,7 +90,7 @@ And Tadaa! passing in 100 runs in no time.
 ## Bottom-up
 Sometimes the function overhead exceeds the recursion depth in the stack, even if it is memoized. The workaround is coming up with a bottom up solution that starts at the tree's farthest child instead of the argument as a parent.
 
-So we will initialize the cache list except start at `cache[0] = 0` and work your our up:
+So we will initialize the cache list except start at `cache[0] = 0` and work our up:
 
 ```
 cache[1] is cache[0] + 1
