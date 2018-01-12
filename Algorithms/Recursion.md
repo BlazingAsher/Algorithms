@@ -58,6 +58,6 @@ def pascal(coloumn :int, row :int):
 ### figure 2
 ![](Images/img8.png)
 
-To build the triangle, start with **1** at the top with 2 other **1𝘀** under it, then continue placing numbers below it in a triangular pattern.
+To build the triangle, start with **1** at the top with 2 other **1**𝘀 under it, then continue placing numbers below it in a triangular pattern.
 
 Each number is the numbers directly above it added together.
