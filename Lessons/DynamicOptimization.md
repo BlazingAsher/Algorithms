@@ -67,6 +67,7 @@ Most of the computations are calculated more than once which is unnecessary. The
 To optimize a recursive solution to a memoized one you need:
 + A cup of hash-map or list of previous computations
 + A spoonful of saving computations to previous computations if they aren't already, if they are just return the key in the hash
+and you will have a working memoized recursive program , bon appétit.
 ### Implementation
 ```python
 cache = [1e+9 for i in range(5000)] # Since we are comparing mins fill list with arbitrarily large numbers
