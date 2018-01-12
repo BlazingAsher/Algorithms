@@ -14,7 +14,7 @@
 <!-- /TOC -->
 
 # Dynamic Optimization
-Recursion might be a "cool" way of doing iterative and not so iterative stuff, but sometimes recursion does some unnecessary computations.
+Recursion might be a useful method of implementing  multiple calls , but sometimes recursion does some unnecessary computations.
 
 ## Sample problem
 
