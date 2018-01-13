@@ -2,7 +2,7 @@
 <!-- TOC -->
 
 - [Graph Theory](#graph-theory)
-        - [Figure 1](#figure-1)
+    - [Figure 1](#figure-1)
     - [A node](#a-node)
     - [An Edge](#an-edge)
         - [Figure 2](#figure-2)
@@ -22,7 +22,7 @@ A graph data structure consists of a finite , *and possibly mutable*, set of ord
 where **V** is the set of vertices and **E** is the set of edges
 
 
-### Figure 1
+## Figure 1
 ![](Images/img1.png)
 
 ## A node
