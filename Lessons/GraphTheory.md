@@ -18,15 +18,14 @@
 
 # Graph Theory
 
-A graph data structure consists of a finite , *and possibly mutable*, set of ordered pairs, called edges or arcs, of certain entities called nodes or vertices. A graph is represented by a pair of two sets **G<V, E>**
-where **V** is the set of vertices and **E** is the set of edges
-
+A `graph` is a structure amounting to a set of objects in which some pairs of the objects are in some sense "related".
 
 ## Figure 1
 ![](Images/img1.png)
 
+ A graph is represented by a pair of two sets **G<V, E>** where **V** is the set of vertices and **E** is the set of edges
 ## A node
-Represented as a circle (Red in fig. 1).
+Represented as circles in [Fig. 1](#figure-1).
 + A `Degree` or `Valency` denoted 𝛿(v) is how many edges are connected to a node
 >Count loops as 2 edges in valency
 + `Isolated node` is a node with degree 0 (in [Fig. 1](#figure-1) node 10)
@@ -34,7 +33,7 @@ Represented as a circle (Red in fig. 1).
 >[Fig. 1](#figure-1) node **2** has an adjacent vertices **1** and **6**
 
 ## An Edge
-Represented as a line connecting nodes.
+Represented as a line connecting nodes in [Fig. 1](#figure-1).
 + an edge **e** is `incedent` to node **a** and node **b** if it connects them
 + A `Loop` is an edge that points to the node itself
 > node 9 in [Fig. 1](#figure-1)
