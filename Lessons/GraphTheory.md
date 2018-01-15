@@ -36,7 +36,8 @@ Represented as circles in [Fig. 1](#figure-1).
 Represented as a line connecting nodes in [Fig. 1](#figure-1).
 + an edge **e** is `incedent` to node **a** and node **b** if it connects them
 + A `Loop` is an edge that points to the node itself
->Count loops as 2 edges in valency
+>**Note** : Count loops as 2 edges in valency
+
 > node 9 in [Fig. 1](#figure-1)
 + An edge can be parallel to other edges. We refer to the number of edges connecting to nodes directly with `multiplicity` of an edge. Graphs containing parallel edges are called `multi-graphs`
 >[Fig. 1](#figure-1) edge connecting node **3** and node **8** has multiplicity of 2
