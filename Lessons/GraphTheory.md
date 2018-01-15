@@ -47,7 +47,6 @@ Represented as a line connecting nodes in [Fig. 1](#figure-1).
 + `cycle` is a path of edges that go in a 'cycle' back to the starting node
 + a graph's `diameter` is the longest shortest path in a connected graph without backtracking or repeating edges or nodes
 >refer to the yellow path in [Fig. 2](#figure-2).
-
 ### Figure 2
 ![](Images/img3.png)
 
