@@ -13,7 +13,7 @@
 <!-- /TOC -->
 
 # Graph Search
-Navigating through a graph is one of the very first uses for graphs. The way you implement graph traversal varies depending on what you want to achieve. Some applications include:
+Traversing a graph is one of the very first uses for graphs. The way you implement graph traversal varies depending on what you want to achieve. Some applications include:
 + Web crawling
 + Pathfinding
 + Finding shortest paths

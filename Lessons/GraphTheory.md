@@ -6,8 +6,8 @@
     - [A node](#a-node)
     - [An Edge](#an-edge)
         - [Figure 2](#figure-2)
-        - [Figure 3](#figure-3)
     - [graph terminology](#graph-terminology)
+        - [Figure 3](#figure-3)
     - [ways to implement a graph](#ways-to-implement-a-graph)
         - [Figure 4](#figure-4)
     - [Trees](#trees)
@@ -26,44 +26,46 @@ where **V** is the set of vertices and **E** is the set of edges
 ![](Images/img1.png)
 
 ## A node
-Represented as a little circle (Red in fig. 1).
+Represented as a circle (Red in fig. 1).
 + A `Degree` or `Valency` denoted 𝛿(v) is how many edges are connected to a node
 >Count loops as 2 edges in valency
 + `Isolated node` is a node with degree 0 (in [Fig. 1](#figure-1) node 10)
-+ `adjacent vertices`  to a node are vertices that are directly connected to it. ex -> [Fig. 1](#figure-1) node (2) has an adjacency array **Adj[2]** = [1,6]
++ `adjacent vertices`  to a node are vertices that are directly connected to it.
+>[Fig. 1](#figure-1) node **2** has an adjacent vertices **1** and **6**
 
 ## An Edge
 Represented as a line connecting nodes.
-+ an edge (e) is `incedent` to node(a) and node(b) if i connects them
-+ A `Loop` is an edge that points to the node itself (node 9 in [Fig. 1](#figure-1))
-+ An edge can be parallel to another `multigraphs` edges that are parallel to another edge have a multiplicity of 2 (In [Fig. 1](#figure-1) edge connecting node 3 and node 8 )
-+ `Weighted graphs` have distances on their edges (In [Fig. 1](#figure-1) edge connecting node 1 and node 3)
-+ `directed graphs` have directed edges like (In [Fig. 1](#figure-1) edge connecting node 3 and node 8)
++ an edge **e** is `incedent` to node **a** and node **b** if it connects them
++ A `Loop` is an edge that points to the node itself
+> node 9 in [Fig. 1](#figure-1)
++ An edge can be parallel to other edges. We refer to the number of edges connecting to nodes directly with `multiplicity` of an edge. Graphs containing parallel edges are called `multi-graphs`
+>[Fig. 1](#figure-1) edge connecting node **3** and node **8** has multiplicity of 2
++ `Weighted graphs` have distances on their edges
+>[Fig. 1](#figure-1) edge connecting node **1** and node **3** has weight of 16 Kilometers
++ `directed graphs` have directed edges
+>[Fig. 1](#figure-1) edge connecting node 3 and node 8)
 + `cycle` is a path of edges that go in a 'cycle' back to the starting node
-
->[Fig. 2](#figure-2) is an example of a connected graph
-+ a graph's `diameter` is the longest shortest path in a connected graph without backtracking or repeating edges or nodes, refer to the yellow path in [Fig. 3](#figure-3).
++ a graph's `diameter` is the longest shortest path in a connected graph without backtracking or repeating edges or nodes
+>refer to the yellow path in [Fig. 2](#figure-2).
 
 ### Figure 2
-![](Images/img2.png)
-### Figure 3
 ![](Images/img3.png)
 
 ## graph terminology
-+ A `undirected` graph is a graph with edges represented as sets of 2 vertices (unordered) **e = {a, b}**. A `directed` graph is a graph with edges represented as ordered pairs (tuples) **e' = (a,b)**.
-Most graphs are either are directed or undirected but a mix of both also exists
++ A `undirected` graph is a graph with edges represented as sets of 2 vertices (unordered) **e = {a, b}**. A `directed` graph is a graph with edges represented as ordered pairs (tuples/arrays) **e' = (a,b)**. Most graphs are either directed or undirected but a mix of both also exists
 
->[Fig. 1](#figure-1) is neither directed nor non-directed graph
->because not all vertices are directed like the node
->connecting node 3 and node 8.
-
-
-+ A graph is connected if there is an **x,y** path for **x, y ∈ V**
+>[Fig. 1](#figure-1) is neither directed nor undirected graph
++ `Walk` is a sequence of vertices and edges
++ `Path` a walk with no repeated vertices
++ A graph is `connected` when there is a path between every pair of vertices
+>[Fig. 3](#figure-3) is an example of a connected graph
 
 >[Fig. 1](#figure-1) is an example of a disconnected graph.
 
+### Figure 3
+![](Images/img2.png)
 
-<!-- + `Walk` is a sequence of vertices and edges
+<!--
 
 > `closed walk` is a walk that starts at a node and returns to it
 
@@ -73,19 +75,17 @@ Most graphs are either are directed or undirected but a mix of both also exists
 
 >a closed trail is called a `circiut`
 
-+ `Path` a walk with no repeated vertices
 
 >a closed path is a `cycle`. The first and the last node can be repeated -->
 
 
 ## ways to implement a graph
 
-+ `Adjacency list` -> an array of size **V** with each element in the array pointing to a linked list. The array is indexed by a node (vertices from 0 to v-1) or a hash. where each index or key points to a linked list of adjacent vertices
++ `Adjacency list` is an array of size **V** with each element in the array pointing to a linked list. The array is indexed by a node (vertices from 0 to v-1) or a hash. where each index or key points to a linked list of adjacent vertices
 
-+ `Adjacency Matrix` -> a (0,1)-matrix represented by
++ `Adjacency Matrix` is a matrix (traditionally a 2D array/list) where the element at an index represents the multiplicity of the edge between its indices
 
-a [#of nodes ⨉ # of nodes] 2D-array
-> [Fig. 4](#figure-4) represents a graph and it's Adjacency matrix where the array at **Adj[i][j]** represents edge between **i** and **j** and the number denotes the multiplicity of the edges.
+> [Fig. 4](#figure-4) represents a graph and it's Adjacency matrix
 
 ### Figure 4
 ![](Images/img4.png)
@@ -94,12 +94,13 @@ a [#of nodes ⨉ # of nodes] 2D-array
 
 + `Implicit` -> where the adjacency of a node is a function or node.neighbors() is a method (which takes less space if you aren't going to use all vertices)
 
-
-**Ignoring the implicit representation you need Θ(V + E) space to store graph**
+**Ignoring the implicit representation you need a tight bound of Θ(V + E) space to store graph**
 
 ## Trees
-A `tree` is a connected graph with no trees The edges of a tree are known as branches. Elements of trees are called their nodes. The nodes without child nodes are called leaf nodes. a disjoint collection of trees is called a `forest`.
-
++ A `tree` is an undirected graph in which any two vertices are connected by exactly one path.
+> [Fig. 5](#figure-5) shows 3 trees and an isolated node
++ `Leaf nodes` are nodes without child nodes.
++ A `forest` is a disjoint collection of trees.
 
 ## Connected components
 A `component` of an undirected graph is a subgraph that is completely disconnected than the other components
