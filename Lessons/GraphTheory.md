@@ -84,9 +84,9 @@ Represented as a line connecting nodes in [Fig. 1](#figure-1).
 ### Figure 4
 ![](Images/img4.png)
 
-+ `OPP approach` -> where node is an object and has the attribute neighbors which stores the linked list
++ `OPP approach` is where node is an object and has the attribute neighbors which stores the linked list
 
-+ `Implicit` -> where the adjacency of a node is a function or node.neighbors() is a method (which takes less space if you aren't going to use all vertices)
++ `Implicit approach` is where the adjacency of a node is a function or node.neighbors() is a method (which takes less space if you aren't going to use all vertices)
 
 **Ignoring the implicit representation you need a tight bound of Θ(V + E) space to store graph**
 
