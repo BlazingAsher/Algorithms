@@ -23,7 +23,8 @@ A `graph` is a structure amounting to a set of objects in which some pairs of th
 ## Figure 1
 ![](Images/img1.png)
 
- A graph is represented by a pair of two sets **G<V, E>** where **V** is the set of vertices and **E** is the set of edges
+A graph is represented by a pair of two sets **G<V, E>** where **V** is the set of vertices and **E** is the set of edges
+
 ## A node
 Represented as circles in [Fig. 1](#figure-1).
 + A `Degree` or `Valency` denoted 𝛿(v) is how many edges are connected to a node
@@ -65,17 +66,12 @@ Represented as a line connecting nodes in [Fig. 1](#figure-1).
 ![](Images/img2.png)
 
 <!--
-
 > `closed walk` is a walk that starts at a node and returns to it
-
 > `trivial walk` is a walk that goes through no edges (one node)
-
 + `Trail` is a walk with no repeated edges
-
 >a closed trail is called a `circiut`
-
-
->a closed path is a `cycle`. The first and the last node can be repeated -->
+>a closed path is a `cycle`. The first and the last node can be repeated
+-->
 
 
 ## ways to implement a graph
