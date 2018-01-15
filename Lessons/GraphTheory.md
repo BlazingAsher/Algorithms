@@ -38,13 +38,13 @@ Represented as a line connecting nodes in [Fig. 1](#figure-1).
 + A `Loop` is an edge that points to the node itself
 >**Note** : Count loops as 2 edges in valency
 
-> node 9 in [Fig. 1](#figure-1)
+>**Example**: node **9** in [Fig. 1](#figure-1)
 + An edge can be parallel to other edges. We refer to the number of edges connecting to nodes directly with `multiplicity` of an edge. Graphs containing parallel edges are called `multi-graphs`
->[Fig. 1](#figure-1) edge connecting node **3** and node **8** has multiplicity of 2
+>In [Fig. 1](#figure-1) the edge connecting node **3** and node **8** has multiplicity of 2
 + `Weighted graphs` have distances on their edges
->[Fig. 1](#figure-1) edge connecting node **1** and node **3** has weight of 16 Kilometers
+>In [Fig. 1](#figure-1) the edge connecting node **1** and node **3** has weight of 16 Kilometers
 + `directed graphs` have directed edges
->[Fig. 1](#figure-1) edge connecting node 3 and node 8)
+>Like in [Fig. 1](#figure-1) the edge (with arrow) connecting node **3** and node **8**
 + `cycle` is a path of edges that go in a 'cycle' back to the starting node
 + a graph's `diameter` is the longest shortest path in a connected graph without backtracking or repeating edges or nodes
 >refer to the yellow path in [Fig. 2](#figure-2).
