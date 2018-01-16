@@ -71,7 +71,7 @@ DFS is much more intuitive than BFS in traversal although it is the recursive ap
 ![](Images/gif3.gif)
 ### Implementation
 ```python
-def dfs(graph :object, start :object, visited = None :set):
+def dfs(Adj :dict, start :object, visited = None):
     if visited is None:
         visited = set()
     visited.add(start)
@@ -79,5 +79,5 @@ def dfs(graph :object, start :object, visited = None :set):
         dfs(graph, next, visited)
     return visited
 
-dfs(graph, 'C') # {'E', 'D', 'F', 'A', 'C', 'B'}
+dfs(Adj = {1:{2,3},2:{5,4,1},3:{1,6},4:{2},5:{2},6:{3,7},7:{6}}, Start = 1)
 ```
