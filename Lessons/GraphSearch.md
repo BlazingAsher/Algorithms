@@ -16,7 +16,7 @@
 Traversing a graph is one of the very first uses for graphs. The way you implement graph traversal varies depending on what you want to achieve. Some applications include:
 + Web crawling
 + Pathfinding
-+ Finding shortest paths
++ Finding shortest path(s)
 + Maze generation
 + finding all vertices within one connected component
 
@@ -39,11 +39,13 @@ def bfs(start :object, Adj :dict):
     parent = {start: None} # the parent hash is optional but helps
                            # backtrack for shortest paths
 
-    previous = [start] # what vertices in previous
-                       # level (resets with each while iteration)
+    previous = [start] # what vertices were in the previous
+                       # level (resets with each loop)
     i = 1
     while previous:
-        next = []
+        next = [] # if there is no next level there is no
+                  # previous hash for the next iteration,
+                  # resulting in the breakage of the loop
         for vertex in previous:
             for neighbours in Adj[vertex]: # for children of previous vertices
                 if neighbours not in level: # if it hasn't already been traversed
