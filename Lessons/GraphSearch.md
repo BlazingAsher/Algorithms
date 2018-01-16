@@ -24,7 +24,7 @@ Traversing a graph is one of the very first uses for graphs. The way you impleme
 
 ![](Images/gif1.gif)
 ## Breadth First Search
-BFS is one of the most famous graph traversal algorithms because of how broad it can search. In other words, BFS explores the starting node's neighbors before going to the next level of nodes.
+BFS is one of the most famous graph traversal algorithms because of how broad it can search. In other words, BFS explores the starting vertex's neighbors before going to the next level of vertices.
 > BFS is shown in [Fig. 1](###figure-1)
 
 ### figure 1
@@ -35,21 +35,21 @@ BFS is one of the most famous graph traversal algorithms because of how broad it
 ### Implementation
 ```python
 def bfs(start :object, Adj :dict):
-    level  = {start: None} # {node: distance to starting node (# edges)}
+    level  = {start: None} # {vertex: distance to starting vertex (# edges)}
     parent = {start: None} # the parent hash is optional but helps
                            # backtrack for shortest paths
 
-    previous = [start] # what nodes in previous
+    previous = [start] # what vertices in previous
                        # level (resets with each while iteration)
     i = 1
     while previous:
         next = []
-        for node in previous:
-            for neighbours in Adj[node]: # for children of previous nodes
+        for vertex in previous:
+            for neighbours in Adj[vertex]: # for children of previous vertices
                 if neighbours not in level: # if it hasn't already been traversed
 
                     level[neighbours] = i
-                    parent[neighbours] = node
+                    parent[neighbours] = vertex
                     next.append(neighbours)
 
         previous = next
@@ -64,7 +64,7 @@ bfs(start = 1, Adj = {1:{2,3},2:{5,4,1},3:{1,6},4:{2},5:{2},6:{3,7},7:{6}})
 ![](Images/img5.png)
 
 ## Depth First Search
-DFS is much more intuitive than BFS in traversal although it is the recursive approach. DFS traverses into a child of a starting node then goes to it's child and so on until there is no more children then it backtracks.
+DFS is much more intuitive than BFS in traversal although it is the recursive approach. DFS traverses into a child of a starting vertex then goes to it's child and so on until there is no more children then it backtracks.
 
 ### figure 3
 **DFS in action**
