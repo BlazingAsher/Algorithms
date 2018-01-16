@@ -33,20 +33,20 @@ Represented as circles in [Fig. 1](#figure-1).
 >[Fig. 1](#figure-1) vertex **2** has an adjacent vertices **1** and **6**
 
 ## An Edge
-Represented as a line connecting vertexs in [Fig. 1](#figure-1).
+Represented as a line connecting vertices in [Fig. 1](#figure-1).
 + an edge **e** is `incedent` to vertex **a** and vertex **b** if it connects them
 + A `Loop` is an edge that points to the vertex itself
 >**Note** : Count loops as 2 edges in valency
 
 >**Example**: vertex **9** in [Fig. 1](#figure-1)
-+ An edge can be parallel to other edges. We refer to the number of edges connecting to vertexs directly with `multiplicity` of an edge. Graphs containing parallel edges are called `multi-graphs`
++ An edge can be parallel to other edges. We refer to the number of edges connecting to vertices directly with `multiplicity` of an edge. Graphs containing parallel edges are called `multi-graphs`
 >In [Fig. 1](#figure-1) the edge connecting vertex **3** and vertex **8** has multiplicity of 2
 + `Weighted graphs` have distances on their edges
 >In [Fig. 1](#figure-1) the edge connecting vertex **1** and vertex **3** has weight of 16 Kilometers
 + `directed graphs` have directed edges
 >Like in [Fig. 1](#figure-1) the edge (with arrow) connecting vertex **3** and vertex **8**
 + `cycle` is a path of edges that go in a 'cycle' back to the starting vertex
-+ a graph's `diameter` is the longest shortest path in a connected graph without backtracking or repeating edges or vertexs
++ a graph's `diameter` is the longest shortest path in a connected graph without backtracking or repeating edges or vertices
 >refer to the yellow path in [Fig. 2](#figure-2).
 ### Figure 2
 ![](Images/img3.png)
@@ -94,7 +94,7 @@ Represented as a line connecting vertexs in [Fig. 1](#figure-1).
 ## Trees
 + A `tree` is an undirected graph in which any two vertices are connected by exactly one path.
 > [Fig. 5](#figure-5) shows 3 trees and an isolated vertex
-+ `Leaf vertexs` are vertexs without child vertexs.
++ `Leaf vertices` are vertices without child vertices.
 + A `forest` is a disjoint collection of trees.
 
 ## Connected components
