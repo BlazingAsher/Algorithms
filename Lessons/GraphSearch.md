@@ -60,21 +60,22 @@ def bfs(start :object, Adj :dict):
 bfs(start = 1, Adj = {1:{2,3},2:{5,4,1},3:{1,6},4:{2},5:{2},6:{3,7},7:{6}})
 ```
 
-
-
 ### figure 2
 ![](Images/img5.png)
 
 ## Depth First Search
-DFS is much more intuitive than BFS in traversal although it is the recursive approach. DFS traverses into a child of a starting vertex then goes to it's child and so on until there is no more children then it backtracks.
+DFS is much more intuitive than BFS in traversal although it is implemented in a recursive approach.
+DFS traverses into a child of a starting vertex then goes to it's child and so on until there is no more children then it backtracks.
 
 ### figure 3
 **DFS in action**
+
 ![](Images/gif3.gif)
+
 ### Implementation
 ```python
 def dfs(Adj :dict, start :object, visited = None):
-    if visited is None:
+    if visited is None: # verices we already traversed
         visited = set()
     visited.add(start)
     for next in graph[start] - visited:
