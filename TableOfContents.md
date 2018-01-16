@@ -10,7 +10,7 @@ Problems:
 
 + [Combining Riceballs](http://wcipeg.com/problem/ccc16s4)
 
-# ✍🏽 Graph Theory
+# Graph Theory
 #### __[lesson 1 : Graph Theory](Lessons/GraphTheory.md)__
 #### __[lesson 2 : Graph Search](Lessons/GraphSearch.md)__
 Problems:
