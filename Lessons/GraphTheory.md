@@ -26,6 +26,8 @@ A `graph` is a data-structure consisting of objects ,**vertices**, which are con
 A graph is represented by a pair of two sets **G<V, E>** where **V** is the set of vertices and **E** is the set of edges
 
 ## A vertex
+(also **node**)
+
 Is an object in the graph connected to other vertices by edge.
 >Vertices are represented as circles in [Fig. 1](#figure-1).
 + A `Degree` or `Valency` of a vertex denoted 𝛿(v) is how many edges are connected to a vertex
