@@ -18,7 +18,7 @@
 
 # Graph Theory
 
-A `graph` is a data-structure consisting of objects ,**verticies**, which are connected by **edges**.
+A `graph` is a data-structure consisting of objects ,**vertices**, which are connected by **edges**.
 
 ## Figure 1
 ![](Images/img1.png)
@@ -26,22 +26,23 @@ A `graph` is a data-structure consisting of objects ,**verticies**, which are co
 A graph is represented by a pair of two sets **G<V, E>** where **V** is the set of vertices and **E** is the set of edges
 
 ## A vertex
-Represented as circles in [Fig. 1](#figure-1).
-+ A `Degree` or `Valency` denoted 𝛿(v) is how many edges are connected to a vertex
+Is an object in the graph connected to other vertices by edge.
+>Vertices are represented as circles in [Fig. 1](#figure-1).
++ A `Degree` or `Valency` of a vertex denoted 𝛿(v) is how many edges are connected to a vertex
 + `Isolated vertex` is a vertex with degree 0 (in [Fig. 1](#figure-1) vertex 10)
 + `adjacent vertices`  to a vertex are vertices that are directly connected to it.
 >[Fig. 1](#figure-1) vertex **2** has an adjacent vertices **1** and **6**
 
 ## An Edge
-Represented as a line connecting vertices in [Fig. 1](#figure-1).
-+ an edge **e** is `incedent` to vertex **a** and vertex **b** if it connects them
+Edges function as connections between vertices, that may have a weight attribute.
+> Represented as a line connecting vertices in [Fig. 1](#figure-1).
 + A `Loop` is an edge that points to the vertex itself
 >**Note** : Count loops as 2 edges in valency
 
 >**Example**: vertex **9** in [Fig. 1](#figure-1)
 + An edge can be parallel to other edges. We refer to the number of edges connecting to vertices directly with `multiplicity` of an edge. Graphs containing parallel edges are called `multi-graphs`
 >In [Fig. 1](#figure-1) the edge connecting vertex **3** and vertex **8** has multiplicity of 2
-+ `Weighted graphs` have distances on their edges
++ `Weighted graphs` have a numerical attribute (usually positive) on their edges
 >In [Fig. 1](#figure-1) the edge connecting vertex **1** and vertex **3** has weight of 16 Kilometers
 + `directed graphs` have directed edges
 >Like in [Fig. 1](#figure-1) the edge (with arrow) connecting vertex **3** and vertex **8**
