@@ -3,7 +3,7 @@
 
 - [Graph Theory](#graph-theory)
     - [Figure 1](#figure-1)
-    - [A node](#a-node)
+    - [A vertex](#a-vertex)
     - [An Edge](#an-edge)
         - [Figure 2](#figure-2)
     - [graph terminology](#graph-terminology)
@@ -18,35 +18,35 @@
 
 # Graph Theory
 
-A `graph` is a structure amounting to a set of objects in which some pairs of the objects are in some sense "related".
+A `graph` is a data-structure consisting of objects ,**verticies**, which are connected by **edges**.
 
 ## Figure 1
 ![](Images/img1.png)
 
 A graph is represented by a pair of two sets **G<V, E>** where **V** is the set of vertices and **E** is the set of edges
 
-## A node
+## A vertex
 Represented as circles in [Fig. 1](#figure-1).
-+ A `Degree` or `Valency` denoted 𝛿(v) is how many edges are connected to a node
-+ `Isolated node` is a node with degree 0 (in [Fig. 1](#figure-1) node 10)
-+ `adjacent vertices`  to a node are vertices that are directly connected to it.
->[Fig. 1](#figure-1) node **2** has an adjacent vertices **1** and **6**
++ A `Degree` or `Valency` denoted 𝛿(v) is how many edges are connected to a vertex
++ `Isolated vertex` is a vertex with degree 0 (in [Fig. 1](#figure-1) vertex 10)
++ `adjacent vertices`  to a vertex are vertices that are directly connected to it.
+>[Fig. 1](#figure-1) vertex **2** has an adjacent vertices **1** and **6**
 
 ## An Edge
-Represented as a line connecting nodes in [Fig. 1](#figure-1).
-+ an edge **e** is `incedent` to node **a** and node **b** if it connects them
-+ A `Loop` is an edge that points to the node itself
+Represented as a line connecting vertexs in [Fig. 1](#figure-1).
++ an edge **e** is `incedent` to vertex **a** and vertex **b** if it connects them
++ A `Loop` is an edge that points to the vertex itself
 >**Note** : Count loops as 2 edges in valency
 
->**Example**: node **9** in [Fig. 1](#figure-1)
-+ An edge can be parallel to other edges. We refer to the number of edges connecting to nodes directly with `multiplicity` of an edge. Graphs containing parallel edges are called `multi-graphs`
->In [Fig. 1](#figure-1) the edge connecting node **3** and node **8** has multiplicity of 2
+>**Example**: vertex **9** in [Fig. 1](#figure-1)
++ An edge can be parallel to other edges. We refer to the number of edges connecting to vertexs directly with `multiplicity` of an edge. Graphs containing parallel edges are called `multi-graphs`
+>In [Fig. 1](#figure-1) the edge connecting vertex **3** and vertex **8** has multiplicity of 2
 + `Weighted graphs` have distances on their edges
->In [Fig. 1](#figure-1) the edge connecting node **1** and node **3** has weight of 16 Kilometers
+>In [Fig. 1](#figure-1) the edge connecting vertex **1** and vertex **3** has weight of 16 Kilometers
 + `directed graphs` have directed edges
->Like in [Fig. 1](#figure-1) the edge (with arrow) connecting node **3** and node **8**
-+ `cycle` is a path of edges that go in a 'cycle' back to the starting node
-+ a graph's `diameter` is the longest shortest path in a connected graph without backtracking or repeating edges or nodes
+>Like in [Fig. 1](#figure-1) the edge (with arrow) connecting vertex **3** and vertex **8**
++ `cycle` is a path of edges that go in a 'cycle' back to the starting vertex
++ a graph's `diameter` is the longest shortest path in a connected graph without backtracking or repeating edges or vertexs
 >refer to the yellow path in [Fig. 2](#figure-2).
 ### Figure 2
 ![](Images/img3.png)
@@ -66,17 +66,17 @@ Represented as a line connecting nodes in [Fig. 1](#figure-1).
 ![](Images/img2.png)
 
 <!--
-> `closed walk` is a walk that starts at a node and returns to it
-> `trivial walk` is a walk that goes through no edges (one node)
+> `closed walk` is a walk that starts at a vertex and returns to it
+> `trivial walk` is a walk that goes through no edges (one vertex)
 + `Trail` is a walk with no repeated edges
 >a closed trail is called a `circiut`
->a closed path is a `cycle`. The first and the last node can be repeated
+>a closed path is a `cycle`. The first and the last vertex can be repeated
 -->
 
 
 ## ways to implement a graph
 
-+ `Adjacency list` is an array of size **V** with each element in the array pointing to a linked list. The array is indexed by a node (vertices from 0 to v-1) or a hash. where each index or key points to a linked list of adjacent vertices
++ `Adjacency list` is an array of size **V** with each element in the array pointing to a linked list. The array is indexed by a vertex (vertices from 0 to v-1) or a hash. where each index or key points to a linked list of adjacent vertices
 
 + `Adjacency Matrix` is a matrix (traditionally a 2D array/list) where the element at an index represents the multiplicity of the edge between its indices
 
@@ -85,16 +85,16 @@ Represented as a line connecting nodes in [Fig. 1](#figure-1).
 ### Figure 4
 ![](Images/img4.png)
 
-+ `OPP approach` is where node is an object and has the attribute neighbors which stores the linked list
++ `OPP approach` is where vertex is an object and has the attribute neighbors which stores the linked list
 
-+ `Implicit approach` is where the adjacency of a node is a function or **node.neighbors()** is a method (which takes less space if you aren't going to use all vertices)
++ `Implicit approach` is where the adjacency of a vertex is a function or **vertex.neighbors()** is a method (which takes less space if you aren't going to use all vertices)
 
 **Ignoring the implicit representation you need a tight bound of Θ(V + E) space to store graph**
 
 ## Trees
 + A `tree` is an undirected graph in which any two vertices are connected by exactly one path.
-> [Fig. 5](#figure-5) shows 3 trees and an isolated node
-+ `Leaf nodes` are nodes without child nodes.
+> [Fig. 5](#figure-5) shows 3 trees and an isolated vertex
++ `Leaf vertexs` are vertexs without child vertexs.
 + A `forest` is a disjoint collection of trees.
 
 ## Connected components
