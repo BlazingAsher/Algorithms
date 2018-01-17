@@ -15,7 +15,7 @@ items in the portion they ask for. That is rather inefficient though, as you wil
 1e+12 (in Lil jami’s case).That is where the need of an algorithm comes in. The goal is to change your array, so that you will perform minimal operations once
 asked to.
 ## figure 1
-![](Images/img10.png)
+![](Images/img10.pngs)
 
  Given an array `[a, b, c, d]`, we can convert each item to be the sum of all the items before it and itself. This changes our array to `[a, a+b, a+b+c, a+b+c
  +d]`. With this new array, simply subtract to find the sum wanted.
