@@ -9,13 +9,13 @@
     - [Depth First Search](#depth-first-search)
         - [figure 3](#figure-3)
         - [Implementation](#implementation-1)
+    - [Maze](#maze)
 
 <!-- /TOC -->
 
 # Graph Search
 Traversing a graph is one of the very first uses for graphs. The way you implement graph traversal varies depending on what you want to achieve. Some applications include:
 + Web crawling
-+ Pathfinding
 + Finding shortest path(s)
 + Maze generation
 + finding all vertices within one connected component
@@ -84,4 +84,54 @@ def dfs(Adj :dict, start :object, visited = None):
     return visited
 
 dfs(Adj = {1:{2,3},2:{5,4,1},3:{1,6},4:{2},5:{2},6:{3,7},7:{6}}, start = 1)
+```
+
+## Maze
+Realizing what algorithm to use is usually the hardest part of a pathfinding problem. For example [Maze](http://wcipeg.com/problem/ccc08s3) needs a breadth first search algorithm to be solved, yet, it can be solved with DFS but not with optimal efficiency. Since in maze we need to get from point a (**the north west corner**) to point b (**the south east corner**) and find how many intersections we have to cross, the problem boils down to finding the shortest path from a to b.
+
+```python
+for i in range(int(input())):
+    row  = int(input())
+    col  = int(input())
+    pizzaMap = [] # The char map
+
+    for j in range(row):
+        pizzaMap.append(input())
+
+    possPaths = [(0,0,1)] # tuples of (x, y, intersections)
+    traversed = []
+
+    # symbol being (0,0) mapped to the points you can add to it
+    moves = {
+             '+':[(1,0),(-1,0),(0,1),(0,-1)], # N S E W
+             '|':[(0,1),(0,-1)], # N S
+             '-':[(1,0),(-1,0)]  # E W
+            }
+
+    while True:
+        if len(possPaths) == 0: # if Im blocked and can't traverse
+            print (-1)
+            break
+
+        x,y,intersections = possPaths.pop(0)
+        if (x == -1 or x == col) or (y == -1 or y == row):
+            continue
+
+        if pizzaMap[y][x] == '*':
+            continue
+
+        if (x,y) in traversed:
+            continue
+
+        if (x,y) == (col-1,row-1): # we are at the south-east
+            # print (intersections)
+            break
+
+
+        traversed.append((x,y))
+        symbol = pizzaMap[y][x]
+
+        for (dx,dy) in moves[symbol]: # adding the possibilities
+            possPaths.append((x+dx, y+dy, intersections+1))
+        print (possPaths)
 ```
