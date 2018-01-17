@@ -135,3 +135,4 @@ for i in range(int(input())):
             possPaths.append((x+dx, y+dy, intersections+1))
         print (possPaths)
 ```
+Given more time, converting the array into a graph would make this a matter of slapping a bfs function into it but, most of the questions on the CCC, like Maze, don't come in a structure that is directly translatable into a graph.
