@@ -88,7 +88,7 @@ dfs(Adj = {1:{2,3},2:{5,4,1},3:{1,6},4:{2},5:{2},6:{3,7},7:{6}}, start = 1)
 
 ## Maze
 Realizing what algorithm to use is usually the hardest part of a pathfinding problem. For example [Maze](http://wcipeg.com/problem/ccc08s3) needs a breadth first search algorithm to be solved, yet, it can be solved with DFS but not with optimal efficiency. Since in maze we need to get from point a (**the north west corner**) to point b (**the south east corner**) and find how many intersections we have to cross, the problem boils down to finding the shortest path from a to b.
-
+<!--
 ```python
 for i in range(int(input())):
     row  = int(input())
@@ -135,4 +135,5 @@ for i in range(int(input())):
             possPaths.append((x+dx, y+dy, intersections+1))
         print (possPaths)
 ```
+-->
 Given more time, converting the array into a graph would make this a matter of slapping a bfs function into it but, most of the questions on the CCC, like Maze, don't come in a structure that is directly translatable into a graph.

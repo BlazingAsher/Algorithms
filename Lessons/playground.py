@@ -25,7 +25,7 @@ for i in range(int(input())):
         if (x == -1 or x == col) or (y == -1 or y == row):
             continue
 
-        if pizzaMap[y][x] == '*':
+        if pizzaMap[y][x] == '*': # and the search continues
             continue
 
         if (x,y) in traversed:
