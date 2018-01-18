@@ -35,7 +35,6 @@ for i in range(int(input())):
             # print (intersections)
             break
 
-
         traversed.append((x,y))
         symbol = pizzaMap[y][x]
 
