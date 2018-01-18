@@ -4,7 +4,7 @@
     - [figure 1](#figure-1)
     - [Implementation](#implementation)
 - [Difference Arrays](#difference-arrays)
-    - [Implementation](#implementation-1)
+    - [Wireless](#wireless)
 
 <!-- /TOC -->
 # Prefix Sums
@@ -57,9 +57,9 @@ Here is an example. Lets say we had an array `A` with values `[0,0,0,0,0,0]`. No
 
 If we want to increment array A by X from point P1 to P2 &nbsp;**0<= P1<P2 <= len(A)-1**&nbsp;, we can set **A[P1]** to be += **X**, and &nbsp;**A[P2+1]**&nbsp; to be -= **X**. This causes us to only increment two items per change, rather than up to the length of A.
 So to go from `[0,0,0,0,0,0]` to `[0,2,2,2,2,0]`, we would increment **A[1]** by 2 and **A[5]** by -2. This gets us `[0,2,0,0,0,-2]`.
-
+## Wireless
 For [Wireless](http://wcipeg.com/problem/ccc09s5), we need to count the number of bit rates attainable at every intersection. After that, we get the largest number and its count. Given these circles, how do we make our array of intersections?
-## Implementation
+
 First, we need a 2D Difference array __(next chapter)__, but we will be applying single array Difference arrays. The reason is because we are given the points to increment in the form of a circle, not a box.
 
 ```python
@@ -70,5 +70,5 @@ spots = [ [0 for a in range(lenY)] for b in range(lenX) ]
 + Find both values of **x** in given **y**. Set the one with smaller index (or at index 0 if none exist) to += **s**, Set the larger index to += **s**.
 + Once done, apply the prefix sum algorithm to all arrays in spots.
 + Then find the largest number and its count
-<!-- Need code -->
+
 <!-- loop through all y values of circele get x from x = sqrt r**2 - y**2 -->
